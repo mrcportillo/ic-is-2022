@@ -1,7 +1,7 @@
 import Head from "next/head";
 import Home from "../containers/home";
 
-const HomePage = () => {
+function HomePage() {
   return (
     <>
       <Head>
@@ -12,6 +12,6 @@ const HomePage = () => {
       <Home />
     </>
   );
-};
+}
 
 export default HomePage;
