@@ -40,8 +40,10 @@ function Home() {
           <div className={stylesModule.home_card}>
             <div
               role="button"
+              tabIndex={-1}
               className={stylesModule.clickeable}
               onClick={onGetTurn(TURN_TYPES.VIP)}
+              onKeyDown={onGetTurn(TURN_TYPES.VIP)}
             >
               VIP &rarr;
             </div>
@@ -49,8 +51,11 @@ function Home() {
           </div>
           <div className={stylesModule.home_card}>
             <div
+              role="button"
+              tabIndex={0}
               className={stylesModule.clickeable}
               onClick={onGetTurn(TURN_TYPES.GENERAL)}
+              onKeyDown={onGetTurn(TURN_TYPES.GENERAL)}
             >
               General &rarr;
             </div>

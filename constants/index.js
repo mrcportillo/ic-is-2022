@@ -1,3 +1,3 @@
-import { TURN_TYPES } from "./turn";
+import { TURN_TYPES, TURN_WAITING_TIME_BOUNDARIES } from "./turn";
 
-export { TURN_TYPES };
+export { TURN_TYPES, TURN_WAITING_TIME_BOUNDARIES };

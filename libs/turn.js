@@ -1,4 +1,4 @@
-import { TURN_WAITING_TIME_BOUNDARIES } from "../constants/turn";
+import { TURN_WAITING_TIME_BOUNDARIES } from "../constants";
 
 const getTurnBorderColorByWaitingTime = (waitingTime) => {
   if (waitingTime < TURN_WAITING_TIME_BOUNDARIES.GOOD) {
