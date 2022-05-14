@@ -1,6 +1,6 @@
 import { TURN_WAITING_TIME_BOUNDARIES } from "../constants/turn";
 
-export const getTurnBorderColorByWaitingTime = (waitingTime) => {
+const getTurnBorderColorByWaitingTime = (waitingTime) => {
   if (waitingTime < TURN_WAITING_TIME_BOUNDARIES.GOOD) {
     return "green";
   }
@@ -10,4 +10,4 @@ export const getTurnBorderColorByWaitingTime = (waitingTime) => {
   return "firebrick";
 };
 
-// export default { getTurnBorderColorByWaitingTime };
+export default { getTurnBorderColorByWaitingTime };
