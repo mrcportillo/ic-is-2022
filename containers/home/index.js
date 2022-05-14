@@ -1,5 +1,5 @@
-import { useCallback, useState } from "react";
 import Image from "next/image";
+import { useCallback, useState } from "react";
 import stylesModule from "../../styles/styles.module.css";
 import { TURN_TYPES } from "../../constants";
 import Turn from "../../components/Turn";
@@ -13,7 +13,7 @@ const MOCK_TURN = {
   date: new Date().toISOString(),
 };
 
-const Home = () => {
+function Home() {
   const [turn, setTurn] = useState(null);
   const [loadingTurn, setLoadingTurn] = useState(false);
 
@@ -39,6 +39,7 @@ const Home = () => {
         <div className={stylesModule.centered}>
           <div className={stylesModule.home_card}>
             <div
+              role="button"
               className={stylesModule.clickeable}
               onClick={onGetTurn(TURN_TYPES.VIP)}
             >
@@ -82,6 +83,6 @@ const Home = () => {
       </footer>
     </div>
   );
-};
+}
 
 export default Home;

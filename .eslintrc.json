@@ -1,3 +1,73 @@
 {
-  "extends": "next/core-web-vitals"
+  "env": {
+    "browser": true,
+    "es6": true,
+    "jest": true
+  },
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended"
+  ],
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "allowImportExportEverywhere": true
+  },
+  "rules": {
+    "camelcase": "warn",
+    "func-names": "off",
+    "global-require": "warn",
+    "import/no-dynamic-require": "warn",
+    "import/no-extraneous-dependencies": "warn",
+    "jsx-a11y/no-redundant-roles": "warn",
+    "no-multi-assign": "off",
+    "no-nested-ternary": "off",
+    "no-param-reassign": "warn",
+    "no-plusplus": "off",
+    "no-shadow": "warn",
+    "no-underscore-dangle": "warn",
+    "no-unused-expressions": [
+      "error",
+      { "allowShortCircuit": true, "allowTernary": true }
+    ],
+    "no-unused-vars": "warn",
+    "prefer-destructuring": "off",
+    "prettier/prettier": ["error", { "endOfLine": "auto" }],
+    "react/destructuring-assignment": ["off", "always"],
+    "react/jsx-filename-extension": ["off", { "extensions": [".js", ".jsx"] }],
+    "react/jsx-props-no-spreading": ["off"],
+    "react/prefer-stateless-function": [
+      "off",
+      { "ignorePureComponents": false }
+    ],
+    "react/prop-types": ["error", { "skipUndeclared": true }],
+    "react/react-in-jsx-scope": "off",
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "labelAttributes": ["label"],
+        "controlComponents": ["Checkbox"],
+        "depth": 3
+      }
+    ],
+    "jsx-a11y/anchor-is-valid": "off"
+  },
+  "plugins": ["react", "prettier"],
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".android.js", ".ios.js"]
+      }
+    }
+  }
 }
