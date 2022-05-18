@@ -4,15 +4,6 @@ import stylesModule from "../../styles/styles.module.css";
 import { TURN_TYPES } from "../../constants";
 import Turn from "../../components/Turn";
 
-const MOCK_TURN = {
-  id: 1,
-  position: 13,
-  positions_before: 20,
-  estimated_minutes: 5,
-  type: TURN_TYPES.GENERAL,
-  date: new Date().toISOString(),
-};
-
 function Home() {
   const [turn, setTurn] = useState(null);
   const [loadingTurn, setLoadingTurn] = useState(false);
@@ -21,10 +12,13 @@ function Home() {
     (type) => async () => {
       setLoadingTurn(true);
       try {
-        const response = await fetch("");
-        setTurn(MOCK_TURN);
+        const response = await (
+          await fetch(`${process.env.NEXT_PUBLIC_API_URL}/turn?type=${type}`)
+        ).json();
+        setTurn(response.turn);
       } catch (error) {
-        console.log(error);
+        // eslint-disable-next-line no-alert
+        window.alert(error);
       } finally {
         setLoadingTurn(false);
       }
