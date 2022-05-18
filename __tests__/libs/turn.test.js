@@ -1,7 +1,7 @@
 import { TURN_WAITING_TIME_BOUNDARIES } from "../../constants/turn";
-import { getTurnBorderColorByWaitingTime } from "../../libs/turn";
+import turnLib from "../../libs/turn";
 
-// const { getTurnBorderColorByWaitingTime } = turnLib;
+const { getTurnBorderColorByWaitingTime } = turnLib;
 
 describe("getTurnBorderColorByWaitingTime", () => {
   describe("waiting time is below good waiting time boundary", () => {
