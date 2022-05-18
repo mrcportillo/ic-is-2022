@@ -10,4 +10,4 @@ const getTurnBorderColorByWaitingTime = (waitingTime) => {
   return "red";
 };
 
-export default { getTurnBorderColorByWaitingTime };
+export { getTurnBorderColorByWaitingTime };

@@ -21,11 +21,11 @@ describe("getTurnBorderColorByWaitingTime", () => {
     });
   });
   describe("waiting time is above medium waiting time boundary", () => {
-    test("color should be firebrick", () => {
+    test("color should be red", () => {
       const color = getTurnBorderColorByWaitingTime(
         TURN_WAITING_TIME_BOUNDARIES.MEDIUM + 1
       );
-      expect(color).toBe("firebrick");
+      expect(color).toBe("red");
     });
   });
 });
