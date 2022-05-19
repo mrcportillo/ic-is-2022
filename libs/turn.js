@@ -7,7 +7,7 @@ const getTurnBorderColorByWaitingTime = (waitingTime) => {
   if (waitingTime < TURN_WAITING_TIME_BOUNDARIES.MEDIUM) {
     return "gold";
   }
-  return "red";
+  return "firebrick";
 };
 
 export default { getTurnBorderColorByWaitingTime };
