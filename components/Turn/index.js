@@ -1,4 +1,4 @@
-import turnLib from "../../libs/turn";
+import { getTurnBorderColorByWaitingTime } from "../../libs/turn";
 import styles from "../../styles/styles.module.css";
 
 function Turn({ turn, loading }) {
@@ -8,9 +8,7 @@ function Turn({ turn, loading }) {
         loading ? `${styles.turn_card} ${styles.loading}` : styles.turn_card
       }
       style={{
-        borderColor: turnLib.getTurnBorderColorByWaitingTime(
-          turn?.estimated_minutes
-        ),
+        borderColor: getTurnBorderColorByWaitingTime(turn?.estimated_minutes),
       }}
     >
       <div className={styles.turn_header}>

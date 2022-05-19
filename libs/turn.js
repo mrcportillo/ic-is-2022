@@ -10,4 +10,4 @@ const getTurnBorderColorByWaitingTime = (waitingTime) => {
   return "firebrick";
 };
 
-export default { getTurnBorderColorByWaitingTime };
+export { getTurnBorderColorByWaitingTime };
