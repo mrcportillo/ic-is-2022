@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Turn component Loading turn 1`] = `
+<div
+  className="turn_card loading"
+  style={
+    Object {
+      "borderColor": "firebrick",
+    }
+  }
+>
+  <div
+    className="turn_header"
+  >
+    <p>
+       TURN
+    </p>
+    <p>
+      # 
+    </p>
+  </div>
+  <p>
+    Date: 
+  </p>
+  <p>
+    People before: 
+  </p>
+  <p>
+    Waiting time: 
+     minutes
+  </p>
+</div>
+`;
+
+exports[`Turn component Showing turn 1`] = `
+<div
+  className="turn_card"
+  style={
+    Object {
+      "borderColor": "green",
+    }
+  }
+>
+  <div
+    className="turn_header"
+  >
+    <p>
+      GENERAL
+       TURN
+    </p>
+    <p>
+      # 
+      1
+    </p>
+  </div>
+  <p>
+    Date: 
+    Tue May 31 2022
+  </p>
+  <p>
+    People before: 
+    0
+  </p>
+  <p>
+    Waiting time: 
+    2
+     minutes
+  </p>
+</div>
+`;
