@@ -9,6 +9,7 @@
     "lint": "eslint '**/*.{js,jsx}'",
     "lint:fix": "eslint '**/*.{js,jsx}' --fix",
     "test": "jest --watch",
+    "coverage": "jest --coverage",
     "test-build": "jest"
   },
   "dependencies": {
